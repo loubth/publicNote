@@ -2,7 +2,7 @@
 
 ## action的编写方式
 
-请先确保已经学会了“[struts 2入门](struts 2入门.md)”
+请先确保已经学会了“[struts2入门](struts2入门.md)”
 
 ### POJO类方式
 
