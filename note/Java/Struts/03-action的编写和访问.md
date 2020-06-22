@@ -179,3 +179,46 @@ public class DemoAction extends ActionSupport {
     </package>
 </struts>
 ```
+
+### 动态方法绑定配置方式
+
+所谓动态方法绑定，就是在用户界面直接配置要访问的方法
+
+首先动态方法绑定配置方式在struts框架中是默认关闭的，需要手动配置相关常量打开，我们可以查看源配置文件“default.properties”
+
+```properties
+struts.enable.DynamicMethodInvocation = false
+```
+
+我们需要在struts.xml配置文件中将其置为true
+
+```xml
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+    <!--...-->
+</struts>
+```
+
+接下来就是关键了，我们需要在访问action的url中直接指定action对应的处理类的具体方法名，要求与action的名字用英文感叹号隔开，如下所示，两个url分别对应处理类的save方法和delete方法
+
+```jsp
+<a href="${pageContext.request.contextPath}/cust!save.action">保存用户</a><br>
+<a href="${pageContext.request.contextPath}/cust!delete.action">删除用户</a>
+```
+
+由于已经指定了具体的方法名，因此在struts配置文件中action元素就不需要指定method属性了
+
+```xml
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+    <!--包结构-->
+    <package name="default" namespace="/" extends="struts-default">
+        <!--配置Action-->
+        <action name="cust" class="com.itheima.DemoAction">
+            <result name="saveOK">/demo/demo.jsp</result>
+            <result name="delOK">/demo/demo.jsp</result>
+        </action>
+    </package>
+</struts>
+```
+

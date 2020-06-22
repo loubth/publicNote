@@ -93,7 +93,7 @@ configPaths = "struts-default.xml,struts-plugin.xml,struts.xml";
 
 继承的元素，上面的package就继承了struts-default.xml文件中的名为struts-default的包的元素
 
-![image-20200614133728161](image/struts 2配置文件的加载/image-20200614133728161.png)
+![image-20200614133728161](image/struts%202配置文件的加载/image-20200614133728161.png)
 
 #### abstract属性
 
