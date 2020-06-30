@@ -95,6 +95,12 @@ public class Demo3Action extends ActionSupport {
 
 ## action的访问
 
+action的访问路径配置可以参见[struts 2入门](01-struts 2入门.md)
+
+`提示`：action的访问路径有容错机制
+
+比如：我们配置某个package的namespace="/simple"，在这个package里面有一个action的name是hello，那么，我们可以通过：“/simple/hello.action”或“/simple/a/b/c/hello.action”等等都可以访问到这个action。这主要因为是在struts 2中，对于访问的路径有一种容错能力，可以根据路径依次查找相应的package中的action
+
 ### 传统的配置方式
 
 传统的配置方式就是为每个请求都配置一条，比如有两个action，一个是“保存用户”，一个是“删除用户”
