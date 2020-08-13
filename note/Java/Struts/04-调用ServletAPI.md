@@ -2,7 +2,7 @@
 
 ## 完全解耦合的方式
 
-这种方式是通过struts 2框架提供的ActionContext类的一些方法间接的操作servlet的API
+这种方式是通过struts 2框架提供的ActionContext类的一些方法`间接`的操作servlet的API
 
 ### ActionContext常用方法
 
