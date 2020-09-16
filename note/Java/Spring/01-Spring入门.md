@@ -4,7 +4,7 @@
 
 ### Spring框架是什么
 
-Spring是一个为了`解决企业应用开发的复杂性`而创建的轻量级控制反转(IOC)和面向切面(AOP)的`开源容器框架`。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。然而，Spring的用途不仅限于服务器端的开发。从简单性、可测试性和松耦合的角度而言，任何Java应用都可以从Spring中受益
+Spring是一个为了`解决企业应用开发的复杂性问题`而创建的轻量级控制反转(IOC)和面向切面(AOP)的`开源容器框架`。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。然而，Spring的用途不仅限于服务器端的开发。从简单性、可测试性和松耦合的角度而言，任何Java应用都可以从Spring中受益
 
 ### Spring框架有什么用？
 
@@ -38,17 +38,18 @@ Spring框架可以`帮我们创建对象`，在使用Spring框架之前我们使
 
 ```java
 //dao层对象  
-public class UserDao{  
-   public void insert(User user){}  
-}  
-   
+public class UserDao {
+    public void insert(User user) {
+    }
+}
+
 //service层对象  
-public class UserService{  
-   public void insert(User user){  
-	   UserDao userDao = new UserDao();		//手动new对象
-	   userDao.insert(user);  
-   }  
-} 
+public class UserService {
+    public void insert(User user) {
+        UserDao userDao = new UserDao();        //手动new对象
+        userDao.insert(user);
+    }
+}
 ```
 
 存在的问题：层与层之间的依赖
@@ -57,24 +58,26 @@ public class UserService{
 
 ```java
 //dao层对象  
-public class UserDao{  
-	public void insert(User user){}  
-}  
+public class UserDao {
+    public void insert(User user) {
+    }
+}
 
 //service层对象  
-public class UserService{  
-   private UserDao userDao;		//Spring框架会根据配置自动帮我们new一个对象
+public class UserService {
+    private UserDao userDao;        //Spring框架会根据配置自动帮我们new一个对象
 
-   public UserDao getUserDao() {  
-	  return userDao;  
-   }  
-   public void setUserDao(UserDao userDao) {  
-	  this.userDao = userDao;  
-   }  
+    public UserDao getUserDao() {
+        return userDao;
+    }
 
-   public void insert(User user){  
-	  userDao.insert(user);  
-   }  
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
+    }
+
+    public void insert(User user) {
+        userDao.insert(user);
+    }
 }  
 ```
 
