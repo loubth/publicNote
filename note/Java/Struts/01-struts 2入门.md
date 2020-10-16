@@ -4,7 +4,7 @@
 
 ### struts 2是什么
 
-> 百度百科：Struts2是一个基于MVC设计模式的Web应用框架，它本质上相当于一个servlet，`在MVC设计模式中，Struts 2作为控制器`(Controller)来建立模型与视图的数据交互。Struts 2是Struts的下一代产品，是在 struts 1和WebWork的技术基础上进行了合并的全新的Struts 2框架。其全新的Struts 2的体系结构与Struts 1的体系结构差别巨大。Struts 2以WebWork为核心，采用拦截器的机制来处理用户的请求，这样的设计也使得业务逻辑控制器能够与ServletAPI完全脱离开，所以Struts 2可以理解为WebWork的更新产品。虽然从Struts 1到Struts 2有着太大的变化，但是相对于WebWork，Struts 2的变化很小。
+> 百度百科：Struts2是一个基于MVC设计模式的Web应用框架，它本质上相当于一个servlet，**在MVC设计模式中，Struts 2作为控制器**(Controller)来建立模型与视图的数据交互。Struts 2是Struts的下一代产品，是在 struts 1和WebWork的技术基础上进行了合并的全新的Struts 2框架。其全新的Struts 2的体系结构与Struts 1的体系结构差别巨大。Struts 2以WebWork为核心，采用拦截器的机制来处理用户的请求，这样的设计也使得业务逻辑控制器能够与ServletAPI完全脱离开，所以Struts 2可以理解为WebWork的更新产品。虽然从Struts 1到Struts 2有着太大的变化，但是相对于WebWork，Struts 2的变化很小。
 
 ### 什么要使用struts 2
 
@@ -12,7 +12,7 @@
 
 ### struts 2有什么功能
 
-struts 2主要的`功能就是接收分发用户发来的请求`，它的`核心就是servlet中的过滤器`，因此使用struts 2的时候必须要在web.xml中配置核心的过滤器
+struts 2主要的**功能就是接收分发用户发来的请求**，它的**核心就是servlet中的过滤器**，因此使用struts 2的时候必须要在web.xml中配置核心的过滤器
 
 ## 环境准备
 

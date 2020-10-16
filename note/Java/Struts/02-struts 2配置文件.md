@@ -14,7 +14,7 @@ this.init_CustomConfigurationProviders();
 this.init_FilterInitParameters();
 ```
 
-查看源码我们发现，struts 2加载的第一个配置文件是“`org/apache/struts2/default.properties`”，查看其内容
+查看源码我们发现，struts 2加载的第一个配置文件是“**org/apache/struts2/default.properties**”，查看其内容
 
 ```properties
 ### This can be used to set your default locale and encoding scheme
@@ -47,15 +47,15 @@ struts.objectFactory.spring.useClassCache = true
 configPaths = "struts-default.xml,struts-plugin.xml,struts.xml";
 ```
 
-其中“`struts-default.xml`”是struts本身大部分功能所使用的配置文件，其中包括拦截器。而“`struts.xml`”是我们自己编写的配置文件。
+其中“**struts-default.xml**”是struts本身大部分功能所使用的配置文件，其中包括拦截器。而“**struts.xml**”是我们自己编写的配置文件。
 
 ### properties自定义配置文件的加载
 
-接下来加载的是“`struts.properties`”自定义配置文件，这个是遗留的自定义配置文件，已经被“`struts.xml`”配置文件取代
+接下来加载的是“**struts.properties**”自定义配置文件，这个是遗留的自定义配置文件，已经被“**struts.xml**”配置文件取代
 
 ### web.xml配置文件的加载
 
-除了tomcat会加载一次外，struts框架也会加载一次“`web.xml`”配置文件
+除了tomcat会加载一次外，struts框架也会加载一次“**web.xml**”配置文件
 
 ## struts.xml配置文件基础
 
@@ -121,7 +121,7 @@ action对应的实体类中对应的具体方法，不写默认为execute方法
 
 #### type属性
 
-跳转方式，默认为转发，也有其他方式比如重定向，具体请参照`struts-default.xml`
+跳转方式，默认为转发，也有其他方式比如重定向，具体请参照**struts-default.xml**
 
 ```xml
 <package name="struts-default" abstract="true">
@@ -153,7 +153,7 @@ action对应的实体类中对应的具体方法，不写默认为execute方法
 2. struts.xml文件中
 3. web.xml文件中
 
-注意`后加载的常量会覆盖同名的先加载的常量`
+注意**后加载的常量会覆盖同名的先加载的常量**
 
 具体可以设置的常量可以参考“org/apache/struts2/default.properties”文件
 

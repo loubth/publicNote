@@ -2,7 +2,7 @@
 
 ## 完全解耦合的方式
 
-这种方式是通过struts 2框架提供的ActionContext类的一些方法`间接`的操作servlet的API
+这种方式是通过struts 2框架提供的ActionContext类的一些方法**间接**的操作servlet的API
 
 ### ActionContext常用方法
 
@@ -14,7 +14,7 @@
 | java.util.Map<String,Object> | getApplication()              | 获取代表application域的Map集合                      |
 | void                         | put(String key, Object value) | 注意：向request域中存入值                           |
 
-`提示`：获取参数时框架会自动处理乱码
+**提示**：获取参数时框架会自动处理乱码
 
 ### 示例
 
